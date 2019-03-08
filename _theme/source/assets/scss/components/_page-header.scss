@@ -1,0 +1,134 @@
+.apresentation {
+  margin: 80px 0 110px;
+
+  .letter-apresentation {
+    p {
+      font-family: $amiko;
+      font-size: 16px;
+      color: $dark-purple;
+
+      @extend .font-bold;
+    }
+  }
+}
+
+.information {
+  height: 500px;
+  margin-top: 75px;
+
+  .edit-height {
+    min-height: 500px;
+  }
+
+  .general-information {
+    bottom: 17px;
+    background: $white;
+    border-radius: 20px;
+    padding: 20px 20px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 50px 0 50px;
+      border-color: $blue-purple transparent transparent;
+      position: absolute;
+      bottom: -50px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+
+    .image-profile {
+      display: inline-block;
+
+      img {
+        border: 2px solid $blue;
+      }
+    }
+
+    .infos-profile {
+      color: $black;
+
+      .title-nickname {
+        font-family: $kol;
+        font-size: 48px;
+        margin-bottom: 0;
+
+        @extend .font-normal;
+      }
+
+      .function-profile {
+        font-family: $monteserrat;
+        margin-top: 0;
+        font-size: 12px;
+        letter-spacing: 2px;
+
+        @extend .font-extra-light;
+      }
+
+      .contato {
+        margin-top: 30px;
+
+        p {
+          margin-bottom: 0;
+          font-family: $amiko;
+          font-size: 12px;
+
+          @extend .font-light;
+        }
+      }
+    }
+
+    .text-curriculo {
+      margin-bottom: 0;
+      line-height: 60px;
+      margin-top: 8px;
+    }
+
+    .download-profile {
+      color: $black;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .apresentation {
+    margin: 50px 0 30px;
+
+    .letter-apresentation {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .information {
+    .general-information {
+      .image-profile {
+        text-align: center;
+        margin: 0 auto 10px;
+        display: block;
+      }
+
+      .infos-profile {
+        font-size: 44px;
+
+        .title-nickname {
+          font-size: 44px;
+        }
+
+        .contato {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

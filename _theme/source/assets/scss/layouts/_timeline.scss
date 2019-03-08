@@ -1,0 +1,161 @@
+.experience {
+  margin-bottom: 110px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+
+  &::before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 5px;
+    background-color: $blue-purple;
+    left: 50%;
+    margin-left: -1.5px;
+  }
+
+  > li {
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+      content: " ";
+      display: table;
+    }
+
+    &::after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+    > {
+      .timeline-panel {
+        width: 46%;
+        float: left;
+        border: 1px solid #d4d4d4;
+        border-radius: 40px;
+        padding: 20px;
+        position: relative;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        color: $dark-purple;
+
+        &::before {
+          position: absolute;
+          top: 75px;
+          right: -15px;
+          display: inline-block;
+          border-top: 15px solid transparent;
+          border-left: 15px solid #ccc;
+          border-right: 0 solid #ccc;
+          border-bottom: 15px solid transparent;
+          content: " ";
+        }
+
+        &::after {
+          position: absolute;
+          top: 76px;
+          right: -14px;
+          display: inline-block;
+          border-top: 14px solid transparent;
+          border-left: 14px solid #fff;
+          border-right: 0 solid #fff;
+          border-bottom: 14px solid transparent;
+          content: " ";
+        }
+
+        .timeline-title {
+          font-family: $monteserrat;
+          font-size: 12px;
+          margin-bottom: 10px;
+
+          @extend .font-extra-light;
+        }
+
+        .timeline-body > {
+          p,
+          ul {
+            margin-bottom: 0;
+          }
+
+          .function-description,
+          .period {
+            color: $dark-purple;
+            font-family: $kol;
+            font-size: 16px;
+
+            @extend .font-normal;
+          }
+
+          .period {
+            margin-top: 8px;
+          }
+        }
+      }
+
+      .timeline-badge {
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        text-align: center;
+        position: absolute;
+        top: 65px;
+        left: 50%;
+        margin-left: -25px;
+        background-color: $dark-purple;
+        z-index: 1;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+    }
+
+    &.timeline-inverted > .timeline-panel {
+      float: right;
+
+      &::before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+      }
+
+      &::after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .experience {
+    margin-bottom: 30px;
+  }
+
+  .timeline {
+    &::before {
+      display: none;
+    }
+
+    > li {
+      .timeline-panel {
+        width: 100%;
+      }
+
+      .timeline-badge {
+        display: none;
+      }
+    }
+  }
+}

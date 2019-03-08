@@ -1,0 +1,101 @@
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+.form {
+  margin-bottom: 110px;
+
+  .screen-reader-response {
+    display: none;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-family: $kol;
+    font-size: 14px;
+    color: $dark-purple;
+
+    @extend .font-bold;
+  }
+
+  .required,
+  .text-required {
+    font-family: $amiko;
+    font-size: 12px;
+    color: red;
+
+    @extend .font-bold;
+  }
+
+  .wpcf7-not-valid-tip {
+    font-size: 12px;
+  }
+
+  .text-required {
+    margin-right: 15px;
+  }
+
+  .btn-position {
+    text-align: right;
+  }
+
+  .btn-send {
+    font-family: $amiko;
+    font-size: 12px;
+    color: $white;
+    background: $purple;
+    width: 25%;
+
+    @extend .font-bold;
+  }
+
+  input[aria-invalid="true"],
+  select[aria-invalid="true"],
+  textarea[aria-invalid="true"] {
+    box-shadow: 0 0 0 0.2rem rgba(red, 0.25);
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(red, 0.25);
+    }
+  }
+
+  input[aria-invalid="false"],
+  select[aria-invalid="false"],
+  textarea[aria-invalid="false"] {
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($purple, 0.25);
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+
+    .btn-position {
+      text-align: center;
+    }
+
+    .text-required {
+      margin-right: 7px;
+    }
+
+    .btn-send {
+      width: 50%;
+    }
+  }
+}

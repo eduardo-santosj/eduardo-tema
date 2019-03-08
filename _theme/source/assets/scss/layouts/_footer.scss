@@ -1,0 +1,50 @@
+footer {
+  padding: 10px 0;
+  background: $linear-gradient;
+  display: block;
+
+  p {
+    margin-bottom: 0;
+    font-family: $kol;
+    color: $purple;
+
+    @extend .font-bold;
+  }
+
+  .develop {
+    font-size: 14px;
+  }
+
+  .brand-footer {
+    text-align: center;
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .position-list {
+    text-align: right;
+  }
+
+  ul {
+    margin-bottom: 0;
+
+    li {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .position-list,
+    .title-copy {
+      text-align: center;
+    }
+
+    .brand-footer {
+      margin: 15px auto;
+    }
+  }
+}

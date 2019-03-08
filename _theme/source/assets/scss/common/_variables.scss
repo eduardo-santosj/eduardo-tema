@@ -1,0 +1,26 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #525ddc
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+// COLORS
+$linear-gradient: linear-gradient(to right, rgba(0, 197, 204, 1) 0%, rgba(124, 42, 232, 1) 100%);
+$white: #fff;
+$black: #000;
+$dark-purple: #0a0226;
+$purple: #451873;
+$light-purple: #6800d9;
+$blue-purple: #572bbf;
+$blue: #5404d9;
+
+//FONTS
+$amiko: "Amiko", sans-serif;
+$monteserrat: "Montserrat", sans-serif;
+$kol: "Kollektif", sans-serif;
+

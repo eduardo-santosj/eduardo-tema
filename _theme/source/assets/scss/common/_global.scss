@@ -1,0 +1,27 @@
+.icon {
+  display: inline-block;
+}
+
+.title-primary {
+  font-family: $kol;
+  font-size: 67.9px;
+  color: $dark-purple;
+  margin-bottom: 90px;
+  margin-top: 0;
+
+  @extend .font-bold;
+}
+
+@media (max-width: 767px) {
+  .title-primary {
+    font-size: 35px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title-primary {
+    font-size: 29px;
+    margin-bottom: 45px;
+  }
+}

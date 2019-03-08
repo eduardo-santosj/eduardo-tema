@@ -1,0 +1,85 @@
+.formation,
+.skills {
+  margin-bottom: 110px;
+}
+
+.title-courses {
+  font-family: $monteserrat;
+  font-size: 24px;
+  color: $purple;
+  margin-bottom: 42px;
+  margin-top: 0;
+
+  @extend .font-bold;
+
+  .icon-mortarboard {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+
+  .icon-complementary {
+    width: 30px;
+    height: 30px;
+    vertical-align: bottom;
+  }
+
+  .icon-language {
+    width: 32px;
+    height: 32px;
+    vertical-align: bottom;
+  }
+}
+
+.list-formation {
+  margin-bottom: 40px;
+
+  p {
+    margin-bottom: 0;
+    color: $purple;
+  }
+
+  .star-end {
+    font-family: $monteserrat;
+    font-size: 16px;
+
+    @extend .font-extra-light;
+  }
+
+  .school {
+    font-family: $amiko;
+    font-size: 18px;
+
+    @extend .font-bold;
+  }
+
+  .course,
+  .conclusion {
+    font-family: $amiko;
+    font-size: 16px;
+
+    @extend .font-normal;
+  }
+}
+
+@media (max-width: 767px) {
+  .formation,
+  .skills {
+    margin-bottom: 30px;
+  }
+
+  .title-courses {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .list-formation {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title-courses {
+    font-size: 17px;
+  }
+}
