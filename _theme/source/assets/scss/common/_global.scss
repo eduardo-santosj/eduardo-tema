@@ -12,11 +12,24 @@
   @extend .font-bold;
 }
 
+.visible-xs {
+	display: none;
+}
+
 @media (max-width: 767px) {
   .title-primary {
     font-size: 35px;
     margin-bottom: 45px;
-  }
+	}
+
+	.visible-xs {
+		display: block;
+		width: 100%;
+	}
+
+	.hidden-xs {
+		display: none;
+	}
 }
 
 @media (max-width: 320px) {

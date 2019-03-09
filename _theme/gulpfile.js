@@ -10,14 +10,12 @@ const babel = require('gulp-babel'),
       changed = require('gulp-changed'),
       concat = require('gulp-concat'),
       cssnano = require('gulp-cssnano'),
-      ftp = require('vinyl-ftp'),
-      gutil = require('gulp-util'),
-      htmlmin = require('gulp-htmlmin'),
       imagemin = require('gulp-imagemin'),
-      runSequence = require('run-sequence'),
       sass = require('gulp-sass'),
       uglify = require('gulp-uglify'),
       wait = require('gulp-wait'),
+      gulpIf = require("gulp-if"),
+      spriteSmith = require('gulp.spritesmith'),
       watch = require('gulp-watch');
 
 // Custom tasks for individual extensions
@@ -53,6 +51,21 @@ gulp.task('img', () => {
     .pipe(gulp.dest(conf.destination + '/img'));
 });
 
+//Sprite Image
+gulp.task('sprite', function () {
+	var spriteData = gulp.src(conf.dev.sprite)
+	.pipe(spriteSmith({
+    imgName: 'sprite.png',
+		cssName: 'sprite.css',
+		imgPath: '../img/sprite.png',
+		padding: 20
+
+  }));
+	return spriteData
+		.pipe(gulpIf('*.png', gulp.dest(conf.destination + '/img')))
+		.pipe(gulpIf('*.css', gulp.dest(conf.destination + '/css')));
+});
+
 // Compile fonts on theme folder
 gulp.task('fonts', () => {
   return gulp.src([conf.dev.fonts])
@@ -62,12 +75,12 @@ gulp.task('fonts', () => {
 
 gulp.task('base', () => {
   return gulp.src(['source/style.css'])
-    .pipe(gulp.dest('../wp-content/themes/eduardoTema'));
+    .pipe(gulp.dest('../wp-content/themes/eduardotema'));
 });
 
 gulp.task('watch', () => {
   var base = gulp.watch([conf.dev.php], ['php']);
-  var css = gulp.watch([conf.dev.cssAll], ['css']);
+  var css = gulp.watch([conf.dev.css], ['css']);
   var js = gulp.watch([conf.dev.js], ['js']);
   var fonts = gulp.watch([conf.dev.fonts], ['fonts']);
   var img = gulp.watch([conf.dev.img], ['img']);
@@ -85,40 +98,6 @@ gulp.task('browser-sync', () => {
   });
 });
 
-// Auto deploy to Kinghost server
-// function ftpConnectionParams() {
-//   return ftp.create({
-//     host: "",
-//     port: 80,
-//     user: "",
-//     password: "",
-//     parallel: 5,
-//     log: gutil.log
-//   });
-// }
-
-// gulp.task('ftp-clean', () => {
-//   var conn = ftpConnectionParams();
-
-//   return conn.clean(conf.deploy.path, conf.deploy.path);
-// });
-
-// gulp.task('ftp-upload', () => {
-//   var conn = ftpConnectionParams();
-
-//   return gulp.src('../wp-content/themes/**', { base: 'themes', buffer: false })
-//     .pipe(conn.newer(conf.deploy.path))
-//     .pipe(conn.dest(conf.deploy.path))
-// });
-
-// gulp.task('deploy', (done) => {
-//   runSequence('ftp-clean', 'ftp-upload', function(err) {
-//     if ( err ) return err;
-//     done();
-//   });
-// });
-
-
 // Group tasks
-gulp.task('dev', ['base', 'php', 'css', 'js', 'img', 'fonts','watch', 'browser-sync']);
-gulp.task('build', ['base', 'php', 'css', 'js', 'img', 'fonts']);
+gulp.task('dev', ['base', 'php', 'css', 'js', 'img', 'sprite', 'fonts','watch', 'browser-sync']);
+gulp.task('build', ['base', 'php', 'css', 'js', 'img', 'sprite', 'fonts']);
