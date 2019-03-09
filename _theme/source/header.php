@@ -38,6 +38,7 @@
 	<?php wp_head(); ?>
 </head>
 <body >
+	<h1 style="display:none;">Eduardo Santos Jacinto - Portfólio - Experiência e Conhecimentos</h1>
 	<?php include 'partials/header.php' ?>
 	<div class="wrap" role="document">
     <div class="content">
