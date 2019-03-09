@@ -14,19 +14,19 @@
       <ul class="timeline">
         <?php if(is_array($timeline_list)) :
         	foreach ($timeline_list as $key => $timeline_item) : ?>
-        <li class="<?php $timeline_item['adicional_class'] ?> text-center" data-aos="fade-up">
+        <li class="<?php echo $timeline_item['adicional_class'] ?> text-center" data-aos="fade-up">
           <div class="timeline-badge primary"></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title text-uppercase"><?php $timeline_item['company_name'] ?></h4>
+              <h4 class="timeline-title text-uppercase"><?php echo $timeline_item['company_name'] ?></h4>
             </div>
             <div class="timeline-body">
-              <p class="function-description text-justify"><?php $timeline_item['function_description'] ?></p>
-              <p class="period"><?php $timeline_item['worked_period'] ?></p>
+              <p class="function-description text-justify"><?php echo $timeline_item['function_description'] ?></p>
+              <p class="period"><?php echo $timeline_item['worked_period'] ?></p>
             </div>
           </div>
         </li>
-				<?php 
+				<?php
 					endforeach;
 					endif;
 				?>
