@@ -5,18 +5,18 @@
 
 ?>
 
-<!-- <style>
+<style>
   .tools-icon::before,
   .knowledge-icon::before {
     content: "";
-    background: url(<?php $check['sizes']['thumbnail'] ?>) no-repeat;
+    background: url(<?php echo $check['sizes']['thumbnail'] ?>) no-repeat;
     width: 30px;
     height: 30px;
     position: absolute;
     display: inline-block;
     vertical-align: sub;
   }
-</style> -->
+</style>
 <section id="ferramentas" class="tools knowledge">
   <div class="container">
     <div class="row">
@@ -32,7 +32,7 @@
             	foreach ($tools_list as $key => $tools_item) : ?>
             <div class="col-12" data-aos="fade-up">
               <div class="tools-icon">
-                <h2 class="tools-item"><?php $tools_item['name_tools'] ?></h2>
+                <h2 class="tools-item"><?php echo $tools_item['name_tools'] ?></h2>
               </div>
             </div>
             <?php
@@ -45,7 +45,7 @@
             	foreach ($knowledge_list as $key => $knowledge_item) : ?>
             <div class="col-12" data-aos="fade-up">
               <div class="knowledge-icon">
-                <h2 class="knowledge-item"><?php $knowledge_item['name_knowledge'] ?></h2>
+                <h2 class="knowledge-item"><?php echo $knowledge_item['name_knowledge'] ?></h2>
                 <?php
                 $array_knowledge = $knowledge_item['description_knowledge'];
                 $array_knowledge = explode(",", $array_knowledge);
@@ -54,7 +54,7 @@
                 <ul class="list-knowledge" data-aos="fade-up">
                   <?php foreach ($array_knowledge as $key => $description_item) : ?>
                   <li>
-                    <p><?php $description_item ?></p>
+                    <p><?php echo $description_item ?></p>
                   </li>
                   <?php
 									endforeach;
@@ -91,7 +91,7 @@
             				foreach ($tools_list as $key => $tools_item) : ?>
                     <div class="col-12">
                       <div class="tools-icon">
-                        <h2 class="tools-item"><?php $tools_item['name_tools'] ?></h2>
+                        <h2 class="tools-item"><?php echo $tools_item['name_tools'] ?></h2>
                       </div>
                     </div>
                     <?php
@@ -119,7 +119,7 @@
             				foreach ($knowledge_list as $key => $knowledge_item) : ?>
                     <div class="col-12">
                       <div class="knowledge-icon">
-                        <h2 class="knowledge-item"><?php $knowledge_item['name_knowledge'] ?></h2>
+                        <h2 class="knowledge-item"><?php echo $knowledge_item['name_knowledge'] ?></h2>
                         <?php
                         $array_knowledge = $knowledge_item['description_knowledge'];
                         $array_knowledge = explode(",", $array_knowledge);
@@ -128,7 +128,7 @@
                         <ul class="list-knowledge">
 													<?php foreach ($array_knowledge as $key => $description_item) : ?>
                           <li>
-                            <p><?php $description_item ?></p>
+                            <p><?php echo $description_item ?></p>
                           </li>
                           <?php
 													endforeach;
