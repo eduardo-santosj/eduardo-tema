@@ -80,7 +80,7 @@ gulp.task('base', () => {
 
 gulp.task('watch', () => {
   var base = gulp.watch([conf.dev.php], ['php']);
-  var css = gulp.watch([conf.dev.cssAll], ['css']);
+  var css = gulp.watch([conf.dev.css], ['css']);
   var js = gulp.watch([conf.dev.js], ['js']);
   var fonts = gulp.watch([conf.dev.fonts], ['fonts']);
   var img = gulp.watch([conf.dev.img], ['img']);

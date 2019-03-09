@@ -10,11 +10,21 @@
     <?php if (is_array($project_list)) : ?>
     <div class="row">
 			<?php foreach ($project_list as $key => $project_item) : ?>
-				<div class="col-12 col-sm-3" data-aos="fade-up">
-					<a class="link-project" href="<?php $project_item['project_link']?>">
-						<img class="img-fluid img-scale" src="<?php $project_item['project_img']['url']?>" alt="<?php $project_item['project_img']['alt']?>">
-						<p class="name-project text-center"><?php $project_item['name_project']?></p>
+				<div class="col-12 col-sm-3 img-scale hidden-xs" data-aos="fade-up">
+					<a class="link-project" href="<?php echo $project_item['project_link']?>">
+						<img class="img-fluid " src="<?php echo $project_item['project_img']['url']?>" alt="<?php echo $project_item['project_img']['alt']?>">
+						<p class="name-project text-center"><?php echo $project_item['name_project']?></p>
 					</a>
+				</div>
+				<div class="col-12 visible-xs" data-aos="fade-up">
+					<div class="owl-carousel">
+						<div class="item">
+							<a class="link-project" href="<?php echo $project_item['project_link']?>">
+							<img class="img-fluid img-scale" src="<?php echo $project_item['project_img']['url']?>" alt="<?php echo $project_item['project_img']['alt']?>">
+							<p class="name-project text-center"><?php echo $project_item['name_project']?></p>
+					</a>
+						</div>
+					</div>
 				</div>
 			<?php endforeach; ?>
     </div>
