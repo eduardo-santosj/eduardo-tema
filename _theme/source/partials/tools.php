@@ -1,15 +1,22 @@
-<style>
+<?php
+	$check = get_field('icon_check');
+	$tools_list = get_field('tools');
+	$knowledge_list = get_field('knowledge');
+
+?>
+
+<!-- <style>
   .tools-icon::before,
   .knowledge-icon::before {
     content: "";
-    background: url({{ $check['sizes']['thumbnail'] }}) no-repeat;
+    background: url(<?php $check['sizes']['thumbnail'] ?>) no-repeat;
     width: 30px;
     height: 30px;
     position: absolute;
     display: inline-block;
     vertical-align: sub;
   }
-</style>
+</style> -->
 <section id="ferramentas" class="tools knowledge">
   <div class="container">
     <div class="row">
@@ -21,39 +28,47 @@
       <div class="desk hidden-xs">
         <div class="row">
           <div class="col-12 col-sm-6" data-aos="fade-up">
-            @if (is_array($tools_list))
-            @foreach ($tools_list as $key => $tools_item)
+            <?php if (is_array($tools_list)) :
+            	foreach ($tools_list as $key => $tools_item) : ?>
             <div class="col-12" data-aos="fade-up">
               <div class="tools-icon">
-                <h2 class="tools-item">{{$tools_item['name_tools']}}</h2>
+                <h2 class="tools-item"><?php $tools_item['name_tools'] ?></h2>
               </div>
             </div>
-            @endforeach
-            @endif
+            <?php
+							endforeach;
+							endif;
+						?>
           </div>
           <div class="col-12 col-sm-6" data-aos="fade-up">
-            @if (is_array($knowledge_list))
-            @foreach ($knowledge_list as $key => $knowledge_item)
+            <?php if (is_array($knowledge_list)) :
+            	foreach ($knowledge_list as $key => $knowledge_item) : ?>
             <div class="col-12" data-aos="fade-up">
               <div class="knowledge-icon">
-                <h2 class="knowledge-item">{{$knowledge_item['name_knowledge']}}</h2>
-                @php
+                <h2 class="knowledge-item"><?php $knowledge_item['name_knowledge'] ?></h2>
+                <?php
                 $array_knowledge = $knowledge_item['description_knowledge'];
                 $array_knowledge = explode(",", $array_knowledge);
-                @endphp
-                @if (is_array($array_knowledge))
+                ?>
+                <?php if (is_array($array_knowledge)) : ?>
                 <ul class="list-knowledge" data-aos="fade-up">
-                  @foreach ($array_knowledge as $key => $description_item)
+                  <?php foreach ($array_knowledge as $key => $description_item) : ?>
                   <li>
-                    <p>{{$description_item}}</p>
+                    <p><?php $description_item ?></p>
                   </li>
-                  @endforeach
+                  <?php
+									endforeach;
+									?>
                 </ul>
-                @endif
+                <?php
+								endif;
+								?>
               </div>
             </div>
-            @endforeach
-            @endif
+            <?php
+							endforeach;
+							endif;
+						?>
           </div>
         </div>
       </div>
@@ -72,15 +87,17 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-12">
-                    @if (is_array($tools_list))
-                    @foreach ($tools_list as $key => $tools_item)
+									<?php if (is_array($tools_list)) :
+            				foreach ($tools_list as $key => $tools_item) : ?>
                     <div class="col-12">
                       <div class="tools-icon">
-                        <h2 class="tools-item">{{$tools_item['name_tools']}}</h2>
+                        <h2 class="tools-item"><?php $tools_item['name_tools'] ?></h2>
                       </div>
                     </div>
-                    @endforeach
-                    @endif
+                    <?php
+										endforeach;
+										endif;
+									?>
                   </div>
                 </div>
               </div>
@@ -98,28 +115,34 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-12">
-                    @if (is_array($knowledge_list))
-                    @foreach ($knowledge_list as $key => $knowledge_item)
+									<?php if (is_array($knowledge_list)) :
+            				foreach ($knowledge_list as $key => $knowledge_item) : ?>
                     <div class="col-12">
                       <div class="knowledge-icon">
-                        <h2 class="knowledge-item">{{$knowledge_item['name_knowledge']}}</h2>
-                        @php
+                        <h2 class="knowledge-item"><?php $knowledge_item['name_knowledge'] ?></h2>
+                        <?php
                         $array_knowledge = $knowledge_item['description_knowledge'];
                         $array_knowledge = explode(",", $array_knowledge);
-                        @endphp
-                        @if (is_array($array_knowledge))
+                        ?>
+                        <?php if (is_array($array_knowledge)) : ?>
                         <ul class="list-knowledge">
-                          @foreach ($array_knowledge as $key => $description_item)
+													<?php foreach ($array_knowledge as $key => $description_item) : ?>
                           <li>
-                            <p>{{$description_item}}</p>
+                            <p><?php $description_item ?></p>
                           </li>
-                          @endforeach
+                          <?php
+													endforeach;
+													?>
                         </ul>
-                        @endif
+                        <?php
+													endif;
+												?>
                       </div>
                     </div>
-                    @endforeach
-                    @endif
+                    <?php
+											endforeach;
+											endif;
+										?>
                   </div>
                 </div>
               </div>

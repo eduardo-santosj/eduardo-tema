@@ -5,7 +5,7 @@ $apresentation_letter = get_field('apresatation_letter');
 ?>
 <style>
 .information {
-	background: url($background_section['url']) no-repeat;
+	background: url('http:<?php echo $background_section['url']?>') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
@@ -14,7 +14,7 @@ $apresentation_letter = get_field('apresatation_letter');
 }
 </style>
 <?php if(is_array($information_professional)) : ?>
-	<div class="information">
+	<section class="information">
 		<div class="container">
 			<div class="row align-items-end edit-height justify-content-end">
 				<div class="col-12 col-sm-6">
@@ -53,7 +53,7 @@ $apresentation_letter = get_field('apresatation_letter');
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 <?php endif; ?>
 <div class="apresentation" data-aos="fade-up">
 	<div class="container">
@@ -71,4 +71,3 @@ $apresentation_letter = get_field('apresatation_letter');
 	var_dump($item);
 	echo '</pre>';
 ?> -->
-	

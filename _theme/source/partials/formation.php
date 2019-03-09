@@ -1,12 +1,22 @@
+<?php
+	$mortarboard = get_field('graduations_icon');
+	$complementary = get_field('complementary_icon');
+	$language = get_field('language_icon');
+	$formation_list = get_field('graduations');
+	$complementary_list = get_field('complementary');
+	$language_list = get_field('language');
+?>
+
+
 <style>
   .icon-mortarboard {
-    background: url({{{ $mortarboard['url'] }}}) no-repeat;
+    background: url(<?php $mortarboard['url'] ?>) no-repeat;
   }
   .icon-complementary {
-    background: url({{{ $complementary['url'] }}}) no-repeat;
+    background: url(<?php $complementary['url'] ?>) no-repeat;
   }
   .icon-language {
-    background: url({{{ $language['url'] }}}) no-repeat;
+    background: url(<?php $language['url'] ?>) no-repeat;
   }
 </style>
 <section id="formacao" class="formation">
@@ -25,18 +35,20 @@
           Formações Acadêmicas
         </h2>
       </div>
-      @if(is_array($formation_list))
-      @foreach ($formation_list as $key => $formation)
+      <?php if(is_array($formation_list)) :
+      	foreach ($formation_list as $key => $formation) : ?>
       <div class="col-12 col-sm-6">
         <div class="list-formation" data-aos="fade-up">
-          <p class="star-end">{{ $formation['year_start_end']}}</p>
-          <p class="school">{{ $formation['name_school'] }}</p>
-          <p class="course">Curso: {{ $formation['name_course'] }}</p>
-          <p class="conclusion">Ano de Conclusão: {{ $formation['conclusion_year'] }}</p>
+          <p class="star-end"><?php $formation['year_start_end']?></p>
+          <p class="school"><?php $formation['name_school'] ?></p>
+          <p class="course">Curso: <?php $formation['name_course'] ?></p>
+          <p class="conclusion">Ano de Conclusão: <?php $formation['conclusion_year'] ?></p>
         </div>
       </div>
-      @endforeach
-      @endif
+      <?php
+				endforeach;
+				endif;
+			?>
     </div>
   </div>
 </section>
@@ -57,17 +69,19 @@
             Cursos Complementares
           </h2>
         </div>
-        @if(is_array($complementary_list))
-        @foreach ($complementary_list as $key => $complementary)
+				<?php if(is_array($complementary_list)) :
+        	foreach ($complementary_list as $key => $complementary) : ?>
         <div class="col-12">
           <div class="list-formation" data-aos="fade-up">
-            <p class="school">{{ $complementary['name_school'] }}</p>
-            <p class="course">{{ $complementary['name_course'] }}</p>
-            <p class="conclusion">{{ $complementary['year_conclusion'] }}</p>
+            <p class="school"><?php $complementary['name_school'] ?></p>
+            <p class="course"><?php $complementary['name_course'] ?></p>
+            <p class="conclusion"><?php $complementary['year_conclusion'] ?></p>
           </div>
         </div>
-        @endforeach
-        @endif
+        <?php
+					endforeach;
+					endif;
+				?>
       </div>
       <div class="col-12 col-sm-6">
           <div class="col-12">
@@ -76,16 +90,18 @@
               Idiomas
             </h2>
           </div>
-          @if(is_array($language_list))
-          @foreach ($language_list as $key => $language)
+          <?php if(is_array($language_list)) :
+          	foreach ($language_list as $key => $language) : ?>
           <div class="col-12">
             <div class="list-formation" data-aos="fade-up">
-              <p class="school">{{ $language['name_language'] }}</p>
-              <p class="course">{{ $language['name_school'] }}</p>
+              <p class="school"><?php $language['name_language'] ?></p>
+              <p class="course"><?php $language['name_school'] ?></p>
             </div>
           </div>
-          @endforeach
-          @endif
+          <?php
+						endforeach;
+						endif;
+					?>
         </div>
     </div>
   </div>

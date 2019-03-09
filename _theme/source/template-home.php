@@ -1,6 +1,6 @@
 <?php
-	include 'layouts/appDefault.php';
-
+	/* Template Name: Home */
+ 	get_header();
   include 'partials/page-header.php';
   include 'partials/formation.php';
   include 'partials/experience.php';

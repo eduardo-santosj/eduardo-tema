@@ -7,9 +7,9 @@
         </h1>
       </div>
       <div class="col-12" data-aos="fade-up">
-        @php
+        <?php
         echo do_shortcode('[contact-form-7 id="117" title="Contact form 1"]')
-        @endphp
+        ?>
       </div>
     </div>
   </div>

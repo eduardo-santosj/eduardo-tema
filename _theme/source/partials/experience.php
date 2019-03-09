@@ -1,3 +1,6 @@
+<?php
+	$timeline_list = get_field('experience');
+?>
 <section id="experiencia" class="experience">
   <div class="container">
     <div class="row">
@@ -9,23 +12,24 @@
     </div>
     <div class="timeline-list">
       <ul class="timeline">
-        @if(is_array($timeline_list))
-        @foreach ($timeline_list as $key => $timeline_item)
-
-        <li class="{{ $timeline_item['adicional_class'] }} text-center" data-aos="fade-up">
+        <?php if(is_array($timeline_list)) :
+        	foreach ($timeline_list as $key => $timeline_item) : ?>
+        <li class="<?php $timeline_item['adicional_class'] ?> text-center" data-aos="fade-up">
           <div class="timeline-badge primary"></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title text-uppercase">{{ $timeline_item['company_name'] }}</h4>
+              <h4 class="timeline-title text-uppercase"><?php $timeline_item['company_name'] ?></h4>
             </div>
             <div class="timeline-body">
-              <p class="function-description text-justify">{{ $timeline_item['function_description'] }}</p>
-              <p class="period">{{ $timeline_item['worked_period'] }}</p>
+              <p class="function-description text-justify"><?php $timeline_item['function_description'] ?></p>
+              <p class="period"><?php $timeline_item['worked_period'] ?></p>
             </div>
           </div>
         </li>
-        @endforeach
-        @endif
+				<?php 
+					endforeach;
+					endif;
+				?>
       </ul>
     </div>
   </div>
