@@ -60,7 +60,7 @@ $apresentation_letter = get_field('apresatation_letter');
 		<div class="row">
 			<div class="col-12">
 				<div class="letter-apresentation text-justify">
-					<p>{{ $apresentation_letter }}</p>
+					<p><?php echo $apresentation_letter ?></p>
 				</div>
 			</div>
 		</div>
