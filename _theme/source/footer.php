@@ -1,5 +1,3 @@
-	</main>
-</div>
 <footer id="footer" class="content-info">
   <div class="container">
     <div class="row align-items-center">

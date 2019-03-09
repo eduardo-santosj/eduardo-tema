@@ -3,7 +3,7 @@
 	$footer = get_field('icon_footer');
 	$networks_list = get_field('networks');
 ?>
-<footer class="content-info">
+<footer id="footer" class="content-info">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-sm title-copy">
@@ -36,3 +36,12 @@
     </div>
   </div>
 </footer>
+
+<script rel="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script rel="text/javascript" src="<?php echo get_template_directory_uri() . '/js/main.min.js' ?>"></script>
+
+<?php wp_footer(); ?>
+</body>
+
+</html>
