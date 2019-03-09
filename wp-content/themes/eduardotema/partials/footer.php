@@ -7,11 +7,11 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-sm title-copy">
-        <p class="develop"><?php $name_develop ?></p>
+        <p class="develop"><?php echo $name_develop ?></p>
       </div>
       <div class="col-12 col-sm brand-footer">
         <a href="<?php home_url('/') ?>">
-          <img src="<?php $footer['url'] ?>" alt="">
+          <img src="<?php echo $footer['url'] ?>" alt="">
         </a>
       </div>
       <div class="col-12 col-sm position-list">
@@ -19,8 +19,8 @@
         <ul class="list-inline">
 					<?php foreach ($networks_list as $key => $networks_item) : ?>
           <li class="list-inline-item">
-            <a href="<?php $networks_item['url_redes_sociais'] ?>">
-              <img src="<?php $networks_item['icon_networks']['url'] ?>" alt="">
+            <a href="<?php echo $networks_item['url_redes_sociais'] ?>">
+              <img src="<?php echo $networks_item['icon_networks']['url'] ?>" alt="">
             </a>
           </li>
 					<?php endforeach; ?>
