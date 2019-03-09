@@ -36,10 +36,6 @@
     }
   }
 
-  .visible-xs {
-    display: none;
-  }
-
   .card {
     background: transparent;
     border: none;
@@ -73,15 +69,6 @@
 
   @media (max-width: 767px) {
     margin-bottom: 30px;
-
-    .visible-xs {
-      display: block;
-      width: 100%;
-    }
-
-    .hidden-xs {
-      display: none;
-    }
 
     .tools-icon {
       margin-bottom: 25px;

@@ -8,13 +8,13 @@
 	},
 
 	"build": {
-		"php": "../wp-content/themes/eduardoTema/**/*.php",
-		"css": "../wp-content/themes/eduardoTema/css/*.css",
-		"js": "../wp-content/themes/eduardoTema/js/*.js",
-		"img": "../wp-content/themes/eduardoTema/img/**/*.+(png|jpg|jpeg|gif|svg)"
+		"php": "../wp-content/themes/eduardotema/**/*.php",
+		"css": "../wp-content/themes/eduardotema/css/*.css",
+		"js": "../wp-content/themes/eduardotema/js/*.js",
+		"img": "../wp-content/themes/eduardotema/img/**/*.+(png|jpg|jpeg|gif|svg)"
 	},
 
-	"destination": "../wp-content/themes/eduardoTema/",
+	"destination": "../wp-content/themes/eduardotema/",
 
 	"bs": {
 		"proxy": "http://localhost/",

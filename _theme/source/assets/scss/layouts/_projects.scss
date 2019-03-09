@@ -1,13 +1,16 @@
 .projects {
   margin-bottom: 110px;
 
+	.img-scale {
+		overflow: hidden;
+	}
+
   .link-project {
     display: inline-block;
     text-decoration: none;
     transition: 2s;
 
-    &:hover,
-    &:focus {
+    &:hover{
       text-decoration: none;
       color: $blue;
       transform: scale(1.05);

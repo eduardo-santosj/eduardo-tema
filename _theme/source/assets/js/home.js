@@ -1,12 +1,3 @@
-export default {
-  init() {
-    // JavaScript to be fired on the home page
-  },
-  finalize() {
-    // JavaScript to be fired on the home page, after the init JS
-  },
-};
-
 $(window).scroll(function() {
   if ($('.nav-bar').offset().top > 50) {
     $('.navbar-fixed-top').addClass('top-nav-collapse');
@@ -19,7 +10,7 @@ $('.navbar-toggler').click(function() {
   $(this).toggleClass('change');
 });
 
-$(window).load(function() {
+$(document).ready(function() {
   $('.curriculo p').attr('class', 'text-curriculo');
 });
 
@@ -43,3 +34,23 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function() {
+	AOS.init();
+
+  $(".owl-carousel").owlCarousel({
+		loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+						nav:false,
+
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+    }
+	});
+});
