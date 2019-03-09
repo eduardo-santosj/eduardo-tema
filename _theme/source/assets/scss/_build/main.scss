@@ -2,6 +2,7 @@
 
 /** Import everything from autoload */
 @import "../autoload/bootstrap";
+@import "../autoload/aos";
 
 /**
  * Import npm dependencies
@@ -21,6 +22,7 @@
 @import "../components/wp-classes";
 @import "../components/page-header";
 @import "../components/formation";
+@import "../components/icon";
 @import "../layouts/header";
 @import "../layouts/sidebar";
 @import "../layouts/footer";

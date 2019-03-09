@@ -10,7 +10,7 @@ $('.navbar-toggler').click(function() {
   $(this).toggleClass('change');
 });
 
-$(window).load(function() {
+$(document).ready(function() {
   $('.curriculo p').attr('class', 'text-curriculo');
 });
 
@@ -34,3 +34,6 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function() {
+	AOS.init();
+});

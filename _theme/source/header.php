@@ -32,8 +32,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Amiko|Montserrat:300,400,500,600,700" rel="stylesheet">
 
 	<!-- Custom CSS -->
-	<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="<?php echo $home . '/css/main.css' ?>">
+	<link rel="stylesheet" href="<?php echo $home . '/css/sprite.css' ?>">
 
 	<?php wp_head(); ?>
 </head>
