@@ -8,6 +8,5 @@ _theme/config/.config.json
 
 
 # Ignoring unnecessary files in Wordpress
-wp-content/themes
 wp-content/plugins
 wp-config.php
