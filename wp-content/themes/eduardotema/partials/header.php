@@ -7,9 +7,9 @@
       <div class="col">
         <nav class="nav-primary float-right text-center navbar-expand-lg navbar-expand-xl">
           <button class="navbar-toggler hidden-lg collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
           </button>
           <div class="collapse navbar-collapse position-navbar-mobile" id="navbarSupportedContent">
 						<?php
@@ -20,5 +20,4 @@
       </div>
     </div>
   </div>
-
 </header>
