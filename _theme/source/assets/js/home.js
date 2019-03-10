@@ -10,8 +10,14 @@ $('.navbar-toggler').click(function() {
   $(this).toggleClass('change');
 });
 
-$(document).ready(function() {
-  $('.curriculo p').attr('class', 'text-curriculo');
+$('.menu-item').click(function() {
+  $('.navbar-collapse').toggleClass('show');
+  $('.navbar-toggler').toggleClass('change');
+});
+
+$('wrap').click(function() {
+  $('.navbar-collapse').toggleClass('show');
+  $('.navbar-toggler').toggleClass('change');
 });
 
 $(document).ready(function(){
@@ -35,6 +41,8 @@ $(document).ready(function(){
 });
 
 $(document).ready(function() {
+  $('.curriculo p').attr('class', 'text-curriculo');
+
 	AOS.init();
 
   $(".owl-carousel").owlCarousel({
