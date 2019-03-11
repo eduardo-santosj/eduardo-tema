@@ -5,7 +5,7 @@ $apresentation_letter = get_field('apresatation_letter');
 ?>
 <style>
 .information {
-	background: url('http:<?php echo $background_section['url']?>') no-repeat;
+	background: url('<?php echo $background_section['url']?>') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
