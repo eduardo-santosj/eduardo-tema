@@ -6,7 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Amiko|Montserrat:300,400,500,600,700" rel="stylesheet">
 
 	<!-- Custom CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?= $home . '/css/main.css' ?>">
   <?php wp_head() ?>
 
