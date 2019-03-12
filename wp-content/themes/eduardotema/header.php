@@ -42,7 +42,7 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS9KQ2D"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<h1 style="opacity:0;transform:scale(0);">Eduardo Santos Jacinto - Portfólio - Experiência e Conhecimentos</h1>
+	<h1 style="line-height:0;">Eduardo Santos Jacinto - Portfólio - Experiência e Conhecimentos</h1>
 	<?php include 'partials/header.php' ?>
 	<div class="wrap" role="document">
     <div class="content">
