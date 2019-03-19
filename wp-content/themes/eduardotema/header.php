@@ -42,6 +42,15 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS9KQ2D"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+	<?php
+	$http = $_SERVER['REQUEST_SCHEME'];
+	$server = $_SERVER['SERVER_NAME'];
+
+	if($http == 'http' && $server == 'eduardosantosj.com.br') {
+		header("Location: https://eduardosantosj.com.br");
+	}
+
+	?>
 	<h1 style="line-height:0;">Eduardo Santos Jacinto - Portfólio - Experiência e Conhecimentos</h1>
 	<?php include 'partials/header.php' ?>
 	<div class="wrap" role="document">
