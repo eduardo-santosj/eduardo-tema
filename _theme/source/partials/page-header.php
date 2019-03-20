@@ -67,7 +67,7 @@ $apresentation_letter = get_field('apresatation_letter');
 	</div>
 </div>
 <?php
-	/echo '<pre>';
+	/*echo '<pre>';
 	var_dump($item);
 	echo '</pre>';
 ?>
