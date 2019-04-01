@@ -16,17 +16,20 @@
 						<p class="name-project text-center"><?php echo $project_item['name_project']?></p>
 					</a>
 				</div>
-				<div class="col-12 visible-xs" data-aos="fade-up">
-					<div class="owl-carousel">
-						<div class="item">
-							<a class="link-project" href="<?php echo $project_item['project_link']?>">
+			<?php endforeach; ?>
+
+			<div class="col-12 visible-xs" data-aos="fade-up">
+				<div class="owl-carousel">
+				<?php foreach ($project_list as $key => $project_item) : ?>
+					<div class="item">
+						<a class="link-project" href="<?php echo $project_item['project_link']?>">
 							<img class="img-fluid img-scale" src="<?php echo $project_item['project_img']['url']?>" alt="<?php echo $project_item['project_img']['alt']?>">
 							<p class="name-project text-center"><?php echo $project_item['name_project']?></p>
-					</a>
-						</div>
+						</a>
 					</div>
+				<?php endforeach; ?>
 				</div>
-			<?php endforeach; ?>
+			</div>
     </div>
   </div>
 	<?php endif; ?>
